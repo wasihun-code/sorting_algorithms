@@ -56,7 +56,6 @@ void quicksortalgo(int *array, int size, int start, int end)
 		return;
 
 	int i = lomutopartition(array, size, start, end);
-
 	quicksortalgo(array, size, start, i - 1);
 	quicksortalgo(array, size, i + 1, end);
 }
