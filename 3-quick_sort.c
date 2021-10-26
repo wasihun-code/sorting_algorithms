@@ -22,7 +22,7 @@ void swap(int *a, int *b)
  * Return: index to the pivot.
  */
 
-int lomutopartition(int *array, int size, int start, int end)
+int lomutopartition(int *array, size_t size, int start, int end)
 {
 	int j, pivot = array[end], i = start;
 
@@ -48,7 +48,7 @@ int lomutopartition(int *array, int size, int start, int end)
  * Return: nothing since void.
  */
 
-void quicksortalgo(int *array, int size, int start, int end)
+void quicksortalgo(int *array, size_t size, int start, int end)
 {
 	if (start >= end)
 		return;
