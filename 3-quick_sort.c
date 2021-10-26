@@ -25,9 +25,9 @@ void swap(int *i, int *j)
 
 int lomutopartition(int *array, int size, int start, int end)
 {
-	int j, pivot = array[end], i = start;
+	int j, pivot = size - 1, i = start;
 
-	for (j = start; j < end; ++j)
+	for (j = start; j < size - 1; ++j)
 	{
 		if (array[j] < pivot)
 		{
@@ -35,6 +35,8 @@ int lomutopartition(int *array, int size, int start, int end)
 			++i;
 		}
 	}
+
+	print_array(array, size);
 
 	swap(&array[i], &array[end]);
 
@@ -64,7 +66,7 @@ void quicksortalgo(int *array, int size, int start, int end)
 /**
  * quick_sort - implementation of quicksort.
  * @array: array to be sorted.
- * @size: lengtj of the array.
+ * @size: length of the array.
  * Return: nothing since void.
  */
 
