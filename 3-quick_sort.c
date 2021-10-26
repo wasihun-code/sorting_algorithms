@@ -1,19 +1,18 @@
 #include "sort.h"
 
 /**
- * swap - makes it easy and readable to swap integers.
- * @i: pointer to integer to swap.
- * @j: pointer to integer to swap.
- * Return: 0 since void.
+ * swap - swaps two integers.
+ * @a: integer one.
+ * @b: integer two.
+ * Return: nothing since void.
  */
 
-void swap(int *i, int *j)
+void swap(int *a, int *b)
 {
-	int temp = *i;
-	*i = *j;
-	*j = temp;
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
-
 /**
  * lomutopartition - partitioning scheme.
  * @array: array to be sorted.
@@ -25,9 +24,9 @@ void swap(int *i, int *j)
 
 int lomutopartition(int *array, int size, int start, int end)
 {
-	int j, pivot = size - 1, i = start;
+	int j, pivot = array[end], i = start;
 
-	for (j = start; j < size - 1; ++j)
+	for (j = start; j < end; ++j)
 	{
 		if (array[j] < pivot)
 		{
@@ -35,11 +34,8 @@ int lomutopartition(int *array, int size, int start, int end)
 			++i;
 		}
 	}
-
-	print_array(array, size);
-
 	swap(&array[i], &array[end]);
-
+	print_array(array, size);
 	return (i);
 }
 
