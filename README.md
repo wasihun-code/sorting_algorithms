@@ -1,2 +1,5 @@
-Bubble-sort, quick-sort, selection-sort, Insertion-sort implementation in c
 # sorting_algorithms
+  Bubble sort.
+  Selection sort.
+  Quick sort.
+  Insertion sort.
