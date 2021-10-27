@@ -23,6 +23,7 @@ void swap(int *a, int *b)
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j, temp, min;
+
 	if (size == 1)
 		return;
 	if (size == 2)
