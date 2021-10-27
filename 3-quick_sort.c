@@ -13,6 +13,7 @@ void swap(int *a, int *b)
 	*a = *b;
 	*b = tmp;
 }
+
 /**
  * lomutopartition - partitioning scheme.
  * @array: array to be sorted.
@@ -24,7 +25,9 @@ void swap(int *a, int *b)
 
 int lomutopartition(int *array, size_t size, int start, int end)
 {
-	int j, pivot = array[end], i = start;
+	int j;
+	int pivot = array[end];
+	int i = start;
 
 	for (j = start; j < end; ++j)
 	{
